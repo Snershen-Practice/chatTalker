@@ -1,0 +1,86 @@
+@import 'reset';
+@import 'variable';
+@import 'base';
+@import 'layout';
+
+
+.feature{
+    display: flex;
+    align-items: center;
+    &-list{
+        width: 50%;
+    }
+    &-title{
+        width: 50%;
+      
+    }
+}
+
+.feature-list{
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    // gap: 47px;
+    .item{
+        padding: 32px;
+        width: 230px;
+        margin-bottom: 28px;
+        border-radius: 12px;
+        margin-right: 47px;
+        @include shadow;
+        &:nth-child(2n){
+            margin-right: 0;
+        }
+        &-img{
+            margin-bottom: 24px;
+            width: 86px;
+            height: 86px;
+            background-size: 52px;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            @include shadow;
+            &-1{
+                background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/icon01.svg");
+            }
+            &-2{
+                background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/icon02.svg");
+            }
+            &-3{
+                background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/icon03.svg");
+            }
+            &-4{
+                background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/icon04.svg");
+            }
+        }
+        h3{
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.feature-title{
+    padding: 0 50px;
+    h2{
+        margin-bottom: 16px;
+    }
+    p{
+        margin-bottom: 24px;
+        line-height: 1.625;
+    }
+}
+
+.footer-price{
+    background: center top /cover url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home_footer.svg") no-repeat;
+    height: 503px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h2{
+        margin-top: 320px;
+        margin-bottom: 48px;
+    }
+}
