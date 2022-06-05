@@ -7,6 +7,7 @@ p{
     line-height: 1.5;
 }
 
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -14,7 +15,6 @@ nav{
 }
 
 *{
-    font-family: 'Noto Sans TC', sans-serif;
     color:$black;
     transition: 0.2s;
     scroll-behavior: smooth;
@@ -23,4 +23,8 @@ nav{
 
 *,*::before,*::after{
     box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p,a{
+    font-family: 'Noto Sans TC', sans-serif;
 }

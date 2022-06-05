@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+p {
+  line-height: 1.5;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+* {
+  color: #221E1F;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.container {
+  max-width: 1088px;
+  margin: 0 auto;
+}
+
+.container-s {
+  max-width: 909px;
+  margin: 0 auto;
+}
+
+.btn-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 71px;
+  height: 71px;
+  font-weight: 700;
+  border-radius: 50%;
+  position: fixed;
+  right: 48px;
+  bottom: 23px;
+}
+
+nav {
+  padding: 24px 0;
+}
+
+nav h1 {
+  text-indent: 101%;
+  overflow: hidden;
+  background: center/contain url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/logo.png") no-repeat;
+}
+
+nav h1 a {
+  display: block;
+  width: 218px;
+  height: 42px;
+}
+
+footer {
+  text-align: center;
+  background-color: #F7F9FD;
+  padding: 16px 0;
+}
+
+.mb-2 {
+  margin-bottom: 8px;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+.mb-25 {
+  margin-bottom: 100px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.f-c {
+  -webkit-box-flex: center;
+      -ms-flex: center;
+          flex: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.title-0 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.title-1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.title-2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.title-3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.title-4 {
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.btn {
+  padding: 12px 32px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.btn-s {
+  padding: 8px 32px;
+}
+
+.btn-primary {
+  background-color: #56C4C5;
+  border: 1px solid #56C4C5;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  border: 1px solid #56C4C5;
+  color: #56C4C5;
+  background-color: #fff;
+}
+
+.btn-secondary {
+  background-color: #FF5D50;
+  border: 1px solid #FF5D50;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  border: 1px solid #FF5D50;
+  color: #FF5D50;
+  background-color: #fff;
+}
+
+.primary-color {
+  color: #56C4C5;
+}
+
+header {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/banner.svg");
+  background-position: right top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 559px;
+}
+
+header h2 {
+  margin-top: 92px;
+  margin-bottom: 16px;
+}
+
+header .gray-bg {
+  background-color: #F7F9FD;
+  width: 100%;
+  height: 470px;
+  position: absolute;
+  z-index: -1;
+  border-radius: 0px 0px 0px 300px;
+}
+
+.plan h2 {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.plan-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 54px;
+}
+
+.plan-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+
+.plan-card .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  padding: 10px 0 29px;
+  -webkit-box-shadow: 0px 2px 10px #00000014;
+          box-shadow: 0px 2px 10px #00000014;
+}
+
+.plan-card .item h3 {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0 16px;
+  border-bottom: 1px solid #DDDDDD;
+  margin-bottom: 32px;
+}
+
+.plan-card .item > p {
+  margin-bottom: 32px;
+  padding: 0 48px;
+  text-align: center;
+}
+
+.plan-card .item .item-fee {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 36px;
+}
+
+.plan-card .item .item-fee > p {
+  font-size: 29px;
+  padding: 0 17px;
+}
+
+.plan-card .item .item-fee-num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 169px;
+  height: 108px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+}
+
+.plan-card .item-feature {
+  margin-bottom: 32px;
+}
+
+.plan-card .item-feature li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 16px;
+}
+
+.plan-card .item-feature-img {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/icon_check.svg");
+  width: 20px;
+  height: 16px;
+  margin-right: 13px;
+}
+
+.problem h2 {
+  margin-bottom: 48px;
+}
+
+.problem-list .item {
+  border-radius: 12px;
+  padding: 16px 32px;
+  margin-bottom: 16px;
+  -webkit-box-shadow: 0px 2px 10px #00000014;
+          box-shadow: 0px 2px 10px #00000014;
+}
+
+.problem-list h3 {
+  font-size: 1.125rem;
+}
+
+.problem-list p {
+  color: #747474;
+}
+
+.strong {
+  font-size: 700;
+}
+
+.small {
+  font-size: 0.75rem;
+}
+
+.bigger {
+  font-size: 32px;
+  font-family: 'Comfortaa', cursive;
+}
+/*# sourceMappingURL=price.css.map */

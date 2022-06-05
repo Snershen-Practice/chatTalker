@@ -3,6 +3,11 @@
     margin: 0 auto;
 }
 
+.container-s{
+    max-width: 909px;
+    margin: 0 auto;
+}
+
 .btn-back{
     display: flex;
     justify-content: center;
@@ -23,9 +28,9 @@ nav{
         overflow: hidden;
         background:center/contain url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/logo.png") no-repeat;
         a{
-            display: inline-block;
+            display: block;
             width: 218px;
-            height: 40px;
+            height: 42px;
         }
     }
 }
@@ -33,12 +38,20 @@ nav{
 
 footer{
     text-align: center;
-    background-color: $gray-light;
+    background-color: $gray-1;
     padding: 16px 0;
 }
 
 
 // 間距微調
+.mb-2{
+    margin-bottom: 8px;
+}
+
+.mb-4{
+    margin-bottom: 16px;
+}
+
 .mb-25{
     margin-bottom: 100px;
 }
@@ -55,6 +68,12 @@ footer{
 
 
 // 文字元件
+.title-0{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
 .title-1{
     font-size: 2rem;
     font-weight: 700;
@@ -114,4 +133,6 @@ footer{
 }
 
 
-
+.primary-color{
+    color: $primary-color;
+}
