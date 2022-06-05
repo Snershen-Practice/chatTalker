@@ -3,6 +3,57 @@
 @import 'base';
 @import 'layout';
 
+header{
+    background-image:url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home.svg"),url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home.svg"),;
+    background-position: 90% 0,right top; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    h3{
+        margin-top: 25%;
+        margin-bottom: 16px;
+        color:$primary-color;
+    }
+    h2{
+        margin-bottom: 16px;
+    }
+}
+
+
+.platform{
+    h2{
+        text-align: center;
+        margin-bottom: 48px;
+    }
+}
+
+.platform-list{
+    display: flex;
+    gap: 126px;
+    img{
+        vertical-align: middle;
+        max-width: 100%;
+        object-fit: contain;
+    }
+    h3{
+        margin-bottom: 24px;
+    }
+    p{
+        text-align: center;
+        color:$gray;
+    }
+    .item{
+        width: 33.33333%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-img{
+            width: 90px;
+            height: 90px;
+            margin-bottom: 24px;
+        }
+    }
+}
 
 .feature{
     display: flex;
@@ -12,15 +63,12 @@
     }
     &-title{
         width: 50%;
-      
     }
 }
 
 .feature-list{
     display: flex;
     flex-wrap: wrap;
-    // justify-content: space-between;
-    // gap: 47px;
     .item{
         padding: 32px;
         width: 230px;
@@ -60,7 +108,7 @@
 }
 
 .feature-title{
-    padding: 0 50px;
+    padding: 0 49px 0 105px;
     h2{
         margin-bottom: 16px;
     }
@@ -70,8 +118,66 @@
     }
 }
 
+.comment{
+    h2{
+        text-align: center;
+        margin-bottom: 104px;
+    }
+}
+
+.comment-list{
+    display: flex;
+    justify-content: space-between;
+    gap:16px;
+    .item{
+        position: relative;
+        width: 33.33333%;
+        border-radius: 12px;
+        @include shadow;
+        &>p{
+            margin: 0 32px;
+            padding: 48px 0 24px;
+            border-bottom: 1px solid $gray-light;
+        }
+        &-img{
+            width: 80px;
+            height: 80px;
+            background-size: contain;
+            border-radius: 50%;
+            position: absolute;
+            top:-56px;
+            left: 32px;
+        }
+        &-img-1{
+            background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/user01.jpg");
+        }
+        &-img-2{
+            background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/user02.jpg");
+        }
+        &-img-3{
+            background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/user03.jpg");
+        }
+    }
+    .item-detail{
+        padding: 16px 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        h3{
+            margin-bottom: 8px;
+        }
+        &-star{
+            width: 101px;
+            height: 16px;
+            background-size: contain;
+            background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/icon_star.svg");
+            background-repeat: space no-repeat ;
+        }
+    }
+}
+
 .footer-price{
-    background: center top /cover url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home_footer.svg") no-repeat;
+    background: center top/cover url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home_footer.svg") no-repeat;
     height: 503px;
     .container{
         display: flex;

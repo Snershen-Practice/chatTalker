@@ -3,9 +3,37 @@
     margin: 0 auto;
 }
 
+.btn-back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 71px;
+    height: 71px;
+    font-weight: 700;
+    border-radius: 50%;
+    position:fixed;
+    right:48px;
+    bottom:23px;
+}
+
+nav{
+    padding: 24px 0;
+    h1{
+        text-indent: 101%;
+        overflow: hidden;
+        background:center/contain url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/logo.png") no-repeat;
+        a{
+            display: inline-block;
+            width: 218px;
+            height: 40px;
+        }
+    }
+}
+
+
 footer{
     text-align: center;
-    background-color: $bg-gray;
+    background-color: $gray-light;
     padding: 16px 0;
 }
 
@@ -56,6 +84,7 @@ footer{
 .btn{
     padding: 12px 32px;
     border-radius: 50px;
+    text-align: center;
 }
 
 .btn-s{
@@ -70,6 +99,17 @@ footer{
       border: 1px solid $primary-color;
       color:$primary-color;
       background-color: $white;
+    }
+}
+
+.btn-secondary{
+    background-color: $secondary-color;
+    border: 1px solid $secondary-color;
+    color:$white;
+    &:hover{
+        border: 1px solid $secondary-color;
+        color:$secondary-color;
+        background-color: $white;
     }
 }
 
