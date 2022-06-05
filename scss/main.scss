@@ -4,30 +4,14 @@
 @import 'layout';
 
 header{
+    height: 100vh;
     background-image:url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home.svg"),url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home.svg"),;
     background-position: 90% 60%,right top; 
     background-size: 800px,contain;
     background-repeat: no-repeat;
-    height: 100vh;
     h3{
         margin-top: 25%;
-        margin-bottom: 16px;
         color:$primary-color;
-    }
-    h2{
-        margin-bottom: 16px;
-    }
-    p{
-        font-size: 1.5rem;
-        line-height: 1.5;
-    }
-}
-
-
-.platform{
-    h2{
-        text-align: center;
-        margin-bottom: 48px;
     }
 }
 
@@ -35,12 +19,8 @@ header{
     display: flex;
     gap: 126px;
     img{
-        vertical-align: middle;
         max-width: 100%;
         object-fit: contain;
-    }
-    h3{
-        margin-bottom: 24px;
     }
     p{
         text-align: center;
@@ -54,19 +34,13 @@ header{
         &-img{
             width: 90px;
             height: 90px;
-            margin-bottom: 24px;
         }
     }
 }
 
 .role{
-    h2{
+    h2,h3,p{
         text-align: center;
-        margin-bottom: 16px;
-    }
-    p{
-        text-align: center;
-        margin-bottom: 48px;
     }
 }
 
@@ -76,12 +50,8 @@ header{
     .item{
         width: calc(25% - 16px);
         @include shadow;
-        h3,p{
-            text-align: center;
-        }
         h3{
             color:$primary-color;
-            margin-bottom: 16px;
         }
         p{
             margin-bottom: 24px;

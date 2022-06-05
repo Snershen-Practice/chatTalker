@@ -52,6 +52,14 @@ footer{
     margin-bottom: 16px;
 }
 
+.mb-6{
+    margin-bottom: 24px;
+}
+
+.mb-12{
+    margin-bottom: 48px;
+}
+
 .mb-25{
     margin-bottom: 100px;
 }
@@ -70,31 +78,22 @@ footer{
 // 文字元件
 .title-0{
     font-size: 3rem;
-    font-weight: 700;
-    line-height: 1.5;
 }
 
 .title-1{
     font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.5;
 }
 
 .title-2{
     font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.5;
 }
 
 .title-3{
     font-size: 1.125rem;
-    font-weight: 700;
-    line-height: 1.5;
 }
 
-.title-4{
-    font-weight: 700;
-    line-height: 1.5;
+.strong{
+    font-weight: 700; 
 }
 
 
@@ -115,9 +114,9 @@ footer{
     border: 1px solid $primary-color;
     color:$white;
     &:hover{
-      border: 1px solid $primary-color;
-      color:$primary-color;
-      background-color: $white;
+        border: 1px solid $primary-color;
+        color:$primary-color;
+        background-color: $white;
     }
 }
 
@@ -132,7 +131,21 @@ footer{
     }
 }
 
+.btn-outline{
+    border: 1px solid $primary-color;
+    color:$primary-color;
+    background-color: $white;
+}
 
+.btn-outline-focus{
+    border: 1px solid $primary-color;
+    color:$white;
+    background-color: $primary-color;
+}
+
+
+
+//顏色樣式
 .primary-color{
     color: $primary-color;
 }

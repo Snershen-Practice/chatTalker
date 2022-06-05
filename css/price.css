@@ -82,6 +82,7 @@ nav {
 
 h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Noto Sans TC', sans-serif;
+  line-height: 1.5;
 }
 
 .container {
@@ -143,6 +144,14 @@ footer {
   margin-bottom: 16px;
 }
 
+.mb-6 {
+  margin-bottom: 24px;
+}
+
+.mb-12 {
+  margin-bottom: 48px;
+}
+
 .mb-25 {
   margin-bottom: 100px;
 }
@@ -162,31 +171,22 @@ footer {
 
 .title-0 {
   font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.5;
 }
 
 .title-1 {
   font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.5;
 }
 
 .title-2 {
   font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.5;
 }
 
 .title-3 {
   font-size: 1.125rem;
-  font-weight: 700;
-  line-height: 1.5;
 }
 
-.title-4 {
+.strong {
   font-weight: 700;
-  line-height: 1.5;
 }
 
 .btn {
@@ -221,6 +221,18 @@ footer {
   border: 1px solid #FF5D50;
   color: #FF5D50;
   background-color: #fff;
+}
+
+.btn-outline {
+  border: 1px solid #56C4C5;
+  color: #56C4C5;
+  background-color: #fff;
+}
+
+.btn-outline-focus {
+  border: 1px solid #56C4C5;
+  color: #fff;
+  background-color: #56C4C5;
 }
 
 .primary-color {
