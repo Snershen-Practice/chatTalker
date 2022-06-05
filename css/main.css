@@ -50,13 +50,20 @@ table {
   border-spacing: 0;
 }
 
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Noto Sans TC', sans-serif;
+  line-height: 1.5;
+}
+
 a {
   text-decoration: none;
   display: inline-block;
 }
 
-p {
-  line-height: 1.5;
+img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 nav {
@@ -68,21 +75,16 @@ nav {
           justify-content: space-between;
 }
 
-* {
-  color: #221E1F;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  scroll-behavior: smooth;
-}
-
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p, a {
-  font-family: 'Noto Sans TC', sans-serif;
-  line-height: 1.5;
+* {
+  color: #221E1F;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -112,9 +114,16 @@ h1, h2, h3, h4, h5, h6, p, a {
   position: fixed;
   right: 48px;
   bottom: 23px;
+  z-index: 1;
 }
 
 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 24px 0;
 }
 
@@ -152,11 +161,11 @@ footer {
   margin-bottom: 48px;
 }
 
-.mb-25 {
-  margin-bottom: 100px;
+.pb-25 {
+  padding-bottom: 100px;
 }
 
-.text-center {
+.text-c {
   text-align: center;
 }
 
@@ -171,6 +180,7 @@ footer {
 
 .title-0 {
   font-size: 3rem;
+  font-weight: 700;
 }
 
 .title-1 {
@@ -213,37 +223,68 @@ footer {
 
 .btn-secondary {
   background-color: #FF5D50;
-  border: 1px solid #FF5D50;
   color: #fff;
+  border: 1px solid #FF5D50;
 }
 
 .btn-secondary:hover {
-  border: 1px solid #FF5D50;
-  color: #FF5D50;
   background-color: #fff;
+  color: #FF5D50;
+  border: 1px solid #FF5D50;
 }
 
 .btn-outline {
-  border: 1px solid #56C4C5;
-  color: #56C4C5;
   background-color: #fff;
+  color: #56C4C5;
+  border: 1px solid #56C4C5;
 }
 
 .btn-outline-focus {
-  border: 1px solid #56C4C5;
-  color: #fff;
   background-color: #56C4C5;
+  color: #fff;
+  border: 1px solid #56C4C5;
 }
 
 .primary-color {
   color: #56C4C5;
 }
 
+@media (max-width: 767px) {
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 24px 20px;
+    background: #fff;
+    border-bottom: 2px solid #FFD153;
+  }
+  nav h1 a {
+    width: 132px;
+    height: 40px;
+  }
+  .pb-25 {
+    padding-bottom: 60px;
+  }
+  .title-0 {
+    font-size: 2rem;
+  }
+  .title-2 {
+    font-size: 1.25rem;
+  }
+  .btn-back {
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
 header {
   height: 100vh;
-  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home.svg");
-  background-position: 90% 60%,right top;
-  background-size: 800px,contain;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg");
+  background-position: 85% 40%,right top,-222px 800px;
+  background-size: 650px,contain,360px;
   background-repeat: no-repeat;
 }
 
@@ -252,17 +293,24 @@ header h3 {
   color: #56C4C5;
 }
 
+.platform {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg");
+  background-position: -222px -180px;
+  background-size: 360px;
+  background-repeat: no-repeat;
+}
+
 .platform-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 126px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.platform-list img {
-  max-width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+.platform-list h3 {
+  margin-bottom: 24px;
 }
 
 .platform-list p {
@@ -271,7 +319,6 @@ header h3 {
 }
 
 .platform-list .item {
-  width: 33.33333%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -287,10 +334,7 @@ header h3 {
 .platform-list .item-img {
   width: 90px;
   height: 90px;
-}
-
-.role h2, .role h3, .role p {
-  text-align: center;
+  margin-bottom: 24px;
 }
 
 .role-list {
@@ -306,13 +350,17 @@ header h3 {
   width: calc(25% - 16px);
   -webkit-box-shadow: 0px 2px 10px #00000014;
           box-shadow: 0px 2px 10px #00000014;
+  border-radius: 12px;
 }
 
 .role-list .item h3 {
+  text-align: center;
   color: #56C4C5;
+  margin-bottom: 16px;
 }
 
 .role-list .item p {
+  text-align: center;
   margin-bottom: 24px;
 }
 
@@ -322,6 +370,8 @@ header h3 {
   margin-bottom: 16px;
   border-radius: 12px 12px 0 0;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
 }
 
 .role-list .item-img-1 {
@@ -366,11 +416,11 @@ header h3 {
 }
 
 .feature-list .item {
-  padding: 32px;
   width: 230px;
+  padding: 32px;
   margin-bottom: 28px;
-  border-radius: 12px;
   margin-right: 47px;
+  border-radius: 12px;
   -webkit-box-shadow: 0px 2px 10px #00000014;
           box-shadow: 0px 2px 10px #00000014;
 }
@@ -379,10 +429,14 @@ header h3 {
   margin-right: 0;
 }
 
+.feature-list .item h3 {
+  margin-bottom: 16px;
+}
+
 .feature-list .item-img {
-  margin-bottom: 24px;
   width: 86px;
   height: 86px;
+  margin-bottom: 24px;
   background-size: 52px;
   background-position: center;
   background-repeat: no-repeat;
@@ -407,25 +461,15 @@ header h3 {
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/icon04.svg");
 }
 
-.feature-list .item h3 {
-  margin-bottom: 16px;
-}
-
 .feature-title {
   padding: 0 49px 0 105px;
 }
 
-.feature-title h2 {
-  margin-bottom: 16px;
-}
-
 .feature-title p {
-  margin-bottom: 24px;
   line-height: 1.625;
 }
 
 .comment h2 {
-  text-align: center;
   margin-bottom: 104px;
 }
 
@@ -442,25 +486,25 @@ header h3 {
 .comment-list .item {
   position: relative;
   width: 33.33333%;
-  border-radius: 12px;
   -webkit-box-shadow: 0px 2px 10px #00000014;
           box-shadow: 0px 2px 10px #00000014;
+  border-radius: 12px;
 }
 
 .comment-list .item > p {
   margin: 0 32px;
   padding: 48px 0 24px;
-  border-bottom: 1px solid #F7F9FD;
+  border-bottom: 1px solid #DDDDDD;
 }
 
 .comment-list .item-img {
+  position: absolute;
+  top: -56px;
+  left: 32px;
   width: 80px;
   height: 80px;
   background-size: contain;
   border-radius: 50%;
-  position: absolute;
-  top: -56px;
-  left: 32px;
 }
 
 .comment-list .item-img-1 {
@@ -476,7 +520,7 @@ header h3 {
 }
 
 .comment-list .item-detail {
-  padding: 16px 32px;
+  padding: 24px 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,13 +534,14 @@ header h3 {
 
 .comment-list .item-detail h3 {
   margin-bottom: 8px;
+  font-weight: 700;
 }
 
 .comment-list .item-detail-star {
   width: 101px;
   height: 16px;
-  background-size: contain;
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/icon_star.svg");
+  background-size: contain;
   background-repeat: space no-repeat;
 }
 
@@ -505,8 +550,8 @@ header h3 {
 }
 
 .footer-price {
-  background: center 30%/cover url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home_footer.svg") no-repeat;
   height: 503px;
+  background: center 30%/cover url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home_footer.svg") no-repeat;
 }
 
 .footer-price .container {
@@ -527,6 +572,99 @@ header h3 {
 
 .footer-price h2 {
   margin-top: 320px;
-  margin-bottom: 48px;
+  font-size: 2rem;
+}
+
+@media (max-width: 767px) {
+  header {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home_sm.svg");
+    background-position: center 340px,center 370px;
+    background-size: 80%;
+    background-repeat: no-repeat;
+  }
+  header h3 {
+    margin-top: 32px;
+    color: #56C4C5;
+  }
+  .banner {
+    margin: 0 16px;
+  }
+  .platform {
+    background-image: none;
+  }
+  .platform-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 24px;
+  }
+  .role-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 24px;
+  }
+  .role-list .item {
+    width: calc(100% - 76px);
+    margin: 0 38px;
+  }
+  .feature {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin: 0 16px;
+  }
+  .feature-list {
+    width: 100%;
+  }
+  .feature-list .item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto 24px;
+  }
+  .feature-list .item:nth-child(2n) {
+    margin: auto;
+  }
+  .feature-list .item:last-child {
+    margin-bottom: 0;
+  }
+  .feature-title {
+    width: 100%;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  .comment-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 16px;
+  }
+  .comment-list .item {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .footer-price h2 {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

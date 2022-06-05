@@ -1,40 +1,33 @@
 @import 'reset';
 @import 'variable';
+@import 'mixin';
 @import 'base';
 @import 'layout';
 
 header{
+    height: 559px;
     background-image:url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/banner.svg");
     background-position: right top; 
     background-size: contain;
     background-repeat: no-repeat;
-    height: 559px;
     h2{
         margin-top: 92px;
-        margin-bottom: 16px;
     }
     .gray-bg{
-        background-color: $gray-1;
         width: 100%;
         height: 470px;
         position: absolute;
         z-index: -1;
+        background-color: $gray-1;
         border-radius: 0px 0px 0px 300px;
-    }
-}
-
-.plan{
-    h2{
-        text-align: center;
-        margin-bottom: 48px;
     }
 }
 
 .plan-list{
     display: flex;
-    gap: 16px;
     justify-content: center;
     margin-bottom: 54px;
+    gap: 16px;
 }
 
 .plan-card{
@@ -47,19 +40,20 @@ header{
         width: 50%;
         padding: 10px 0 29px;
         @include shadow;
+        @include radius-3;
+        h3,p{
+            text-align: center;
+        }
         h3{
             width: 100%;
-            text-align: center;
             padding: 10px 0 16px;
-            border-bottom: 1px solid $gray-3;
             margin-bottom: 32px;
+            border-bottom: 1px solid $gray-3;
         }
         &>p{
-            margin-bottom: 32px;
             padding: 0 48px;
-            text-align: center;
+            margin-bottom: 32px;
         }
-
         .item-fee{
             display: flex;
             align-items: center;
@@ -69,13 +63,13 @@ header{
                 padding: 0 17px;
             }
             &-num{
+                width: 169px;
+                height: 108px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 169px;
-                height: 108px;
-                background-color: #f5f5f5;
-                border-radius: 12px;
+                background-color: $gray-2;
+                @include radius-3;
             }
         }
         &-feature{
@@ -86,47 +80,33 @@ header{
                 margin-bottom: 16px;
             }
             &-img{
-                background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/icon_check.svg");
                 width: 20px;
                 height: 16px;
                 margin-right: 13px;
+                background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/icon_check.svg"); 
             }
         }
     }
 }
 
-.problem{
-    h2{
-        margin-bottom: 48px;
-    }
-}
 
 .problem-list{
     .item{
-        border-radius: 12px;
         padding: 16px 32px;
         margin-bottom: 16px;
         @include shadow;
-    }
-    h3{
-        font-size: 1.125rem;
+        @include radius-3;
     }
     p{
         color:$gray;
     }
 }
 
-
-.strong{
-    font-size: 700;
-}
-
 .small{
     font-size: 0.75rem;
 }
 
-.bigger{
-    font-size: 32px;
+.font-change{
     font-family: 'Comfortaa', cursive;
 }
 

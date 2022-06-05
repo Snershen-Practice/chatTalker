@@ -1,16 +1,12 @@
 $primary-color:#56C4C5;
 $secondary-color:#FF5D50;
+$third-color:#FFD153;
 $black:#221E1F;
 $white:#fff;
 $gray:#747474;
 $gray-1:#F7F9FD;
 $gray-2:#F5F5F5;
 $gray-3:#DDDDDD;
-
-
-@mixin shadow {
-    box-shadow: 0px 2px 10px #00000014;
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
 

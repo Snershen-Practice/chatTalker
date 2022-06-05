@@ -1,0 +1,16 @@
+@mixin size($w,$h:$w){
+    width:$w;
+    height:$h;
+}
+
+@mixin shadow {
+    box-shadow: 0px 2px 10px #00000014;
+}
+
+@mixin radius-3{
+    border-radius:12px;
+}
+
+@mixin radius-circle{
+    border-radius: 50%;
+}
