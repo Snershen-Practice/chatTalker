@@ -1,0 +1,32 @@
+$(document).ready(function(){
+    $('.btn-outline').click(function(e){
+        e.preventDefault();
+        $('.plan-list').find('.btn-outline').removeClass('btn-outline-focus');
+        $(this).toggleClass('btn-outline-focus');
+    })
+    $('.member-1').click(function(){
+        $('.plan-member').text("10000");
+    })
+    $('.member-2').click(function(){
+        $('.plan-member').text("15000");
+    })
+    $('.member-3').click(function(){
+        $('.plan-member').text("20000");
+    })
+    $('.member-4').click(function(){
+        $('.plan-member').text("25000");
+    })
+    $('.member-5').click(function(){
+        $('.plan-member').text(">25000");
+    })
+
+    $('.problem').find('.item-detail').hide();
+    $('.problem').find('.item').click(function(){
+        $('.problem').find('h3').removeClass('strong').removeClass('primary-color');
+        $('.problem').find('.item-detail').hide();
+        $('.problem').find('.item-img').css('background-image','url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/icon_plus.svg');
+        $(this).find('h3').toggleClass('strong').toggleClass('primary-color');
+        $(this).find('.item-detail').slideToggle();
+        $(this).find('.item-img').css('background-image','url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/icon_minus.svg');
+    })
+})
