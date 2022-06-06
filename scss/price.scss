@@ -45,6 +45,10 @@ header{
     justify-content: center;
     margin-bottom: 54px;
     gap: 16px;
+    overflow-x: auto;
+    a{
+       white-space: nowrap;
+    }
 }
 
 .plan-card{

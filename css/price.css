@@ -126,19 +126,21 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 24px 0;
+  padding: 24px 16px;
 }
 
 nav h1 {
-  text-indent: 101%;
+  width: 218px;
+  height: 40px;
+  text-indent: -100px;
   overflow: hidden;
-  background: center/contain url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/logo.png") no-repeat;
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/logo.png") no-repeat;
+  background-size: 218px 40px;
+  background-position: center;
 }
 
 nav h1 a {
   display: block;
-  width: 218px;
-  height: 42px;
 }
 
 footer {
@@ -263,9 +265,10 @@ footer {
     background: #fff;
     border-bottom: 2px solid #FFD153;
   }
-  nav h1 a {
-    width: 132px;
-    height: 40px;
+  nav h1 {
+    width: 130.84px;
+    height: 24px;
+    background-size: 130.84px 24px;
   }
   .pb-25 {
     padding-bottom: 60px;
@@ -330,6 +333,11 @@ header .gray-bg {
           justify-content: center;
   margin-bottom: 54px;
   gap: 16px;
+  overflow-x: auto;
+}
+
+.plan-list a {
+  white-space: nowrap;
 }
 
 .plan-card {
