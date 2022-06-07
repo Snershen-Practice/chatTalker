@@ -285,28 +285,27 @@ header{
 }
 
 .comment{
+    position: relative;
     h2{
         margin-bottom: 104px;
+    }
+    &::before{
+        content:url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg");
+        position: absolute;
+        width: 150px;
+        left:350px;
+        top:150px;
+        z-index: -10;
     }
 }
 .comment-list{
     display: flex;
     justify-content: space-between;
-    gap:16px;
     .item{
-        position: relative;
-        width: 33.33333%;
+        width: calc(33.33333% - 32px);
         @include shadow;
         @include radius-3;
         background-color: $white;
-        &:first-child::before{
-            content:url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg");
-            position: absolute;
-            width: 150px;
-            left:-100px;
-            top:-100px;
-            z-index: -10;
-        }
         &>p{
             margin: 0 32px;
             padding: 48px 0 24px;
@@ -354,10 +353,25 @@ header{
 
 @include pad{
     .comment-list{
-        flex-direction: column;
         .item{
             width: 100%;
             margin-bottom: 60px;
+        }
+    }
+}
+
+@include mobile{
+    .comment{
+        &::before{
+            content:"";
+            background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg");
+            position: absolute;
+            width: 77px;
+            height: 150px;
+            background-size: 153px;
+            background-position:  right;
+            left:0;
+            top:120px;
         }
     }
 }
@@ -385,3 +399,30 @@ header{
         }
     }
 }
+
+.comment{
+    .container{
+        padding: 0;
+        // margin: 0;
+    }
+}
+
+.swiper {
+    padding: 60px 0px ;
+    width: calc(100% - 32px);
+}
+   
+.swiper-wrapper{
+    max-width: 1088px;
+}
+
+
+.swiper-pagination-bullet-active {
+    width: 20px;
+    border-radius: 8px ;
+    background-color: $third-color;
+}
+
+// *{
+//     outline: solid 1px;
+// }
