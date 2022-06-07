@@ -20,13 +20,14 @@ $(document).ready(function(){
         $('.plan-member').text(">25000");
     })
 
-    $('.problem').find('.item-detail').hide();
-    $('.problem').find('.item').click(function(){
-        $('.problem').find('h3').removeClass('strong').removeClass('primary-color');
-        $('.problem').find('.item-detail').hide();
-        $('.problem').find('.item-img').css('background-image','url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/icon_plus.svg');
+    $('.problem p').hide();
+    $('.problem-list .item').click(function(){
+        $(this).find('p').slideToggle();
         $(this).find('h3').toggleClass('strong').toggleClass('primary-color');
-        $(this).find('.item-detail').slideToggle();
-        $(this).find('.item-img').css('background-image','url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/icon_minus.svg');
+        $(this).find('.item-img').toggleClass('item-img-active');
+        
+        $(this).siblings('.item').find('.item-img').removeClass('item-img-active');
+        $(this).siblings('.item').find('h3').removeClass('strong').removeClass('primary-color');
+        $(this).siblings('.item').find('p').slideUp();
     })
 })

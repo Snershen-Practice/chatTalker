@@ -209,8 +209,11 @@ header{
         
     }
     p{
+        margin: 16px 0 8px;
         color:$gray;
-        line-height: 2;
+    }
+    .item-img-active{
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/icon_minus.svg");
     }
 }
 
