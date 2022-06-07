@@ -1,13 +1,13 @@
 .container{
-    max-width: 1120px;
+    max-width: 1128px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 20px;
 }
 
 .container-s{
-    max-width: 925px;
+    max-width: 933px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 20px;
 }
 
 .btn-top{
@@ -24,10 +24,13 @@
     z-index: 1;
 }
 
+nav.container{
+    padding: 24px 20px;
+}
+
 nav{
     display: flex;
     align-items: center;
-    padding: 24px 16px;
     h1{
         width: 218px;
         height: 40px;
@@ -67,8 +70,8 @@ footer{
     margin-bottom: 48px;
 }
 
-.pb-25{
-    padding-bottom: 100px;
+.section-apart{
+    margin-bottom: 100px;
 }
 
 // 對齊
@@ -119,23 +122,26 @@ footer{
 
 .btn-primary{
     background-color: $primary-color;
-    border: 1px solid $primary-color;
+    // border: 1px solid $primary-color;
     color:$white;
     &:hover{
-        border: 1px solid $primary-color;
-        color:$primary-color;
-        background-color: $white;
+        // opacity: 0.8;
+        background-color:lighten($primary-color,5%);
+        // border: 1px solid $primary-color;
+        // color:$primary-color;
+        // background-color: $white;
     }
 }
 
 .btn-secondary{
     background-color: $secondary-color;
     color:$white;
-    border: 1px solid $secondary-color;
+    // border: 1px solid $secondary-color;
     &:hover{
-        background-color: $white;
-        color:$secondary-color;
-        border: 1px solid $secondary-color;
+        background-color:lighten($secondary-color,5%);
+        // background-color: $white;
+        // color:$secondary-color;
+        // border: 1px solid $secondary-color;
     }
 }
 
@@ -157,27 +163,29 @@ footer{
     color: $primary-color;
 }
 
-@media  (max-width:767px) {
+@include pad{
     nav{
         display: flex;
         align-items: center;
-        padding: 24px 20px;
         background: $white;
         border-bottom: 2px solid $third-color;
+    }
+    
+}
+
+@include mobile {
+    nav{
         h1{
           width: 130.84px;
           height: 24px;
           background-size: 130.84px 24px;
         }
     }
-    .pb-25{
-        padding-bottom: 60px;
+    .section-apart{
+        margin-bottom: 60px;
     }
     .title-0{
         font-size: 2rem;
-    }
-    .title-2{
-        font-size: 1.25rem;
     }
     .btn-back{
         bottom:16px;

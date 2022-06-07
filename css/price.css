@@ -88,15 +88,15 @@ nav {
 }
 
 .container {
-  max-width: 1120px;
+  max-width: 1128px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 20px;
 }
 
 .container-s {
-  max-width: 925px;
+  max-width: 933px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 20px;
 }
 
 .btn-top {
@@ -119,6 +119,10 @@ nav {
   z-index: 1;
 }
 
+nav.container {
+  padding: 24px 20px;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -126,7 +130,6 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 24px 16px;
 }
 
 nav h1 {
@@ -165,8 +168,8 @@ footer {
   margin-bottom: 48px;
 }
 
-.pb-25 {
-  padding-bottom: 100px;
+.section-apart {
+  margin-bottom: 100px;
 }
 
 .text-c {
@@ -215,26 +218,20 @@ footer {
 
 .btn-primary {
   background-color: #56C4C5;
-  border: 1px solid #56C4C5;
   color: #fff;
 }
 
 .btn-primary:hover {
-  border: 1px solid #56C4C5;
-  color: #56C4C5;
-  background-color: #fff;
+  background-color: #69cbcc;
 }
 
 .btn-secondary {
   background-color: #FF5D50;
   color: #fff;
-  border: 1px solid #FF5D50;
 }
 
 .btn-secondary:hover {
-  background-color: #fff;
-  color: #FF5D50;
-  border: 1px solid #FF5D50;
+  background-color: #ff756a;
 }
 
 .btn-outline {
@@ -253,7 +250,7 @@ footer {
   color: #56C4C5;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -261,23 +258,22 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 24px 20px;
     background: #fff;
     border-bottom: 2px solid #FFD153;
   }
+}
+
+@media (max-width: 576px) {
   nav h1 {
     width: 130.84px;
     height: 24px;
     background-size: 130.84px 24px;
   }
-  .pb-25 {
-    padding-bottom: 60px;
+  .section-apart {
+    margin-bottom: 60px;
   }
   .title-0 {
     font-size: 2rem;
-  }
-  .title-2 {
-    font-size: 1.25rem;
   }
   .btn-back {
     bottom: 16px;

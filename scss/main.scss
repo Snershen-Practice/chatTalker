@@ -10,22 +10,56 @@ header{
     background-position: 85% 40%,right top; 
     background-size: 650px,contain;
     background-repeat: no-repeat;
+    &::before{
+        content:"";
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg");
+        background-position: right;
+        background-size: 360px;
+        width: 138px;
+        height: 360px;
+        position: absolute;
+        bottom:-180px;
+        z-index: -10;
+    }
     h3{
         margin-top: 20vh;
         color:$primary-color;
     }
+    p{
+        font-size: 1.5rem;
+    }
 }
 
-header::before{
-    content:"";
-    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg");
-    background-position: right;
-    background-size: 360px;
-    width: 138px;
-    height: 360px;
-    position: absolute;
-    bottom:-180px;
-    z-index: -10;
+
+
+@include pad{
+    header{
+        height: 1100px;
+        background-image:url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home.svg"),url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home_sm.svg");
+        background-position: bottom,bottom; 
+        background-size:90%;
+        background-repeat: no-repeat;
+        &::before{
+            bottom:-600px;
+        }
+        h3{
+            margin-top: 32px;
+            color:$primary-color;
+        }
+    }   
+    
+}
+
+
+@include mobile{
+    header{
+        height: 900px;
+        background-position:center 70%; 
+        background-size:90%;
+        p{
+            font-size: 1rem;
+        }
+    }   
 }
 
 .platform-list{
@@ -106,9 +140,31 @@ header::before{
     }
 }
 
+@include pad{
+    .role-list{
+        margin: 0 auto;
+        width: 80%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        .item{
+            width: 260px;
+        }
+    }
+}
+
+@include mobile{
+    .role-list{
+        flex-direction: column;
+    }
+}
+
 .feature{
-    display: flex;
-    align-items: center;
+    .container{
+        display: flex;
+        align-items: center;
+    }
     &-list{
         width: 50%;
     }
@@ -120,17 +176,13 @@ header::before{
 .feature-list{
     display: flex;
     flex-wrap: wrap;
+    gap:28px;
     .item{
         width: 230px;
         padding: 32px;
-        margin-bottom: 28px;
-        margin-right: 47px;
         background-color: $white;
         @include radius-3;
         @include shadow;
-        &:nth-child(2n){
-            margin-right: 0;
-        }
         h3{
             margin-bottom: 16px;
         }
@@ -162,6 +214,51 @@ header::before{
     padding: 0 49px 0 105px;
     p{
         line-height: 1.625;
+    }
+}
+
+@media (max-width:1020px){
+    .feature{
+        &-list{
+            width: 52%;
+        }
+        &-title{
+            width: 48%;
+        }
+    }
+    .feature-title{
+        padding: 0;
+        p{
+            line-height: 1.625;
+        }
+    }
+}
+@include pad{
+    .feature{
+        .container{
+            flex-direction: column-reverse;
+
+        }
+    }
+    .feature-list{
+        width:70%;
+        justify-content: center;
+        align-items: center;
+        gap:24px;
+        .item{
+            flex-direction: column;
+            // width: 100%;
+        }
+    } 
+    .feature-title{
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 32px;
+        text-align: center;
     }
 }
 
@@ -249,24 +346,7 @@ header::before{
     }
 }
 
-@media (max-width:1024px){
-    header{
-        background-image:url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home.svg"),url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home_sm.svg");
-        background-position: center 340px,center 370px; 
-        background-size: contain;
-        background-repeat: no-repeat;
-        h3{
-            margin-top: 32px;
-            color:$primary-color;
-        }
-    }   
-    header::before{
-        content: none;
-    }
-    .banner{
-        margin: 0 16px;
-    }
-
+@media (max-width:992px){
     .platform{
         background-image: none;
     }
@@ -275,66 +355,20 @@ header::before{
         flex-direction: column;
         gap:24px;
     }
-    .role-list{
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 24px;
-        .item{
-            width: calc(50% - 76px);
-            // margin: 0 38px;
-        }
-    }
-    .feature{
-        flex-direction: column-reverse;
-        margin: 0 16px;
-    }
-    .feature-list{
-        width: 100%;
-        .item{
-            flex-direction: column;
-            // width: 100%;
-            margin: 0 auto 24px;
-            &:nth-child(2n){
-                margin: auto;
-            }
-            &:last-child{
-                margin-bottom: 0;
-            }
-        }
-    } 
-    .feature-title{
-        width: 100%;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 32px;
-        text-align: center;
-    }
+  
+   
     .comment-list{
         flex-direction: column;
-        margin: 0 16px;
         .item{
             width: 100%;
             margin-bottom: 60px;
         }
     }
     .footer-price{
-        background: center 30%/contain url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/footer_sm.svg") no-repeat;
+        background: center 30%/conver url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/footer_sm.svg") no-repeat;
         h2{
             font-size: 1.5rem;
         }
     }
 }
 
-@media (max-width:767px){
-    .role-list{
-        flex-direction: column;
-        align-items: center;
-       .item{
-           width: calc(100% - 32px);
-           margin: 0 16px;
-       }
-    }
-}
