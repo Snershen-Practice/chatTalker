@@ -22,6 +22,33 @@ header{
         border-radius: 0px 0px 0px 300px;
     }
 }
+@include pad{
+    header{
+        height: 600px;
+        background-position: right 40%; 
+        h2{
+            margin-top: 48px;
+        }
+        .gray-bg{
+            width: 100%;
+            height: 540px;
+            position: absolute;
+            z-index: -1;
+            background-color: $gray-1;
+            border-radius: 0px 0px 0px 200px;
+        }
+    }
+   
+}
+
+@include mobile{
+    header{
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/banner_sm.svg");
+        height: 650px;
+        background-position: right; 
+        background-size: cover;
+    }
+}
 
 .plan{
     position: relative;
@@ -43,9 +70,9 @@ header{
 .plan-list{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 54px;
     gap: 16px;
-    overflow-x: auto;
     a{
        white-space: nowrap;
     }
@@ -59,7 +86,7 @@ header{
         flex-direction: column;
         align-items: center;
         width: 50%;
-        padding: 10px 0 29px;
+        padding: 10px 16px 29px;
         background-color: $white;
         @include shadow;
         @include radius-3;
@@ -76,7 +103,7 @@ header{
             padding: 0 48px;
             margin-bottom: 32px;
         }
-        .item-fee{
+        &-fee{
             display: flex;
             align-items: center;
             margin-bottom: 36px;
@@ -110,7 +137,49 @@ header{
         }
     }
 }
-
+@include pad{
+    .plan{
+        .mb-12{
+            margin-bottom: 32px;
+        }
+        &::before{
+            height: 204px;
+            width: 96px;
+            background-size: 204px;
+            left:0;
+            top:700px;
+        }
+    }
+    .plan-list{
+        justify-content: flex-start;
+        overflow-x:scroll;
+        margin: 10px;
+    }
+    .plan-card{
+        flex-direction: column;
+        .item{
+            width: 100%;
+            .title-1{
+                font-size: 1.75rem;
+            }
+            &-fee{
+                &-num{
+                    width: 139px;
+                }
+                p{
+                    padding: 0 6px;
+                }
+            }
+            &-feature{
+                justify-content: center;
+                p{
+                    font-size: 14px;
+                }
+               
+            }
+        }
+    }
+}
 
 .problem-list{
     .item{
@@ -144,6 +213,16 @@ header{
         line-height: 2;
     }
 }
+
+@include pad{
+    .problem{
+        .mb-12{
+            margin-bottom: 32px;
+        }
+    }
+}
+
+
 
 .small{
     font-size: 0.75rem;

@@ -275,7 +275,7 @@ footer {
   .title-0 {
     font-size: 2rem;
   }
-  .btn-back {
+  .btn-top {
     bottom: 16px;
     right: 16px;
   }
@@ -336,6 +336,13 @@ header p {
   header p {
     font-size: 1rem;
   }
+  header::before {
+    background-size: 126px;
+    width: 49px;
+    height: 126px;
+    position: absolute;
+    bottom: -120px;
+  }
 }
 
 .platform-list {
@@ -373,6 +380,19 @@ header p {
   width: 90px;
   height: 90px;
   margin-bottom: 24px;
+}
+
+@media (max-width: 992px) {
+  .platform {
+    background-image: none;
+  }
+  .platform-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 24px;
+  }
 }
 
 .role {
@@ -466,6 +486,13 @@ header p {
 }
 
 @media (max-width: 576px) {
+  .role::after {
+    background-size: 135px;
+    width: 88px;
+    height: 135px;
+    right: 0px;
+    bottom: -30px;
+  }
   .role-list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -698,6 +725,19 @@ header p {
   line-height: 1;
 }
 
+@media (max-width: 992px) {
+  .comment-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .comment-list .item {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+}
+
 .footer-price {
   height: 503px;
   background: center 30%/cover url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home_footer.svg") no-repeat;
@@ -724,29 +764,9 @@ header p {
   font-size: 2rem;
 }
 
-@media (max-width: 992px) {
-  .platform {
-    background-image: none;
-  }
-  .platform-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 24px;
-  }
-  .comment-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .comment-list .item {
-    width: 100%;
-    margin-bottom: 60px;
-  }
+@media (max-width: 576px) {
   .footer-price {
-    background: center 30%/conver url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/footer_sm.svg") no-repeat;
+    background: center/contain url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/footer_sm.svg") no-repeat;
   }
   .footer-price h2 {
     font-size: 1.5rem;
