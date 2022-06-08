@@ -8,9 +8,9 @@
 header{
     height: 559px;
     background-image:url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/banner.svg");
+    background-repeat: no-repeat;
     background-position: right top; 
     background-size: contain;
-    background-repeat: no-repeat;
     h2{
         margin-top: 92px;
     }
@@ -31,11 +31,7 @@ header{
             margin-top: 48px;
         }
         .gray-bg{
-            width: 100%;
             height: 540px;
-            position: absolute;
-            z-index: -1;
-            background-color: $gray-1;
             border-radius: 0px 0px 0px 200px;
         }
     }
@@ -44,8 +40,8 @@ header{
 
 @include mobile{
     header{
-        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/banner_sm.svg");
         height: 650px;
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/banner_sm.svg");
         background-position: right; 
         background-size: cover;
     }
@@ -56,11 +52,10 @@ header{
     &::before{
         content: "";
         background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg");
-        height: 361px;
-        width: 94px;
+        background-repeat: no-repeat;
         background-position: right;
         background-size: 361px;
-        background-repeat: no-repeat;
+        @include size(94px,361px);
         position: absolute;
         left:0;
         top:317px;
@@ -109,15 +104,14 @@ header{
             align-items: center;
             margin-bottom: 36px;
             &>p{
-                font-size: 29px;
                 padding: 0 17px;
+                font-size: 29px;
             }
             &-num{
-                width: 169px;
-                height: 108px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                @include size(169px,108px);
                 background-color: $gray-2;
                 @include radius-3;
             }
@@ -130,10 +124,10 @@ header{
                 margin-bottom: 16px;
             }
             &-img{
-                width: 20px;
-                height: 16px;
+                @include size(20px,16px);
                 margin-right: 13px;
                 background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/icon_check.svg"); 
+                background-repeat: no-repeat;
             }
         }
     }
@@ -144,17 +138,16 @@ header{
             margin-bottom: 32px;
         }
         &::before{
-            height: 204px;
-            width: 96px;
             background-size: 204px;
+            @include size(96px,204px);
             left:0;
             top:700px;
         }
     }
     .plan-list{
         justify-content: center;
-        overflow-x:auto;
         margin: 0 10px 32px;
+        overflow-x:auto;
     }
     .plan-card{
         flex-direction: column;
@@ -175,18 +168,17 @@ header{
                 justify-content: center;
                 p{
                     font-size: 14px;
-                }
-               
+                } 
             }
         }
     }
 }
+
 @media (max-width:810px){
     .plan-list{
         justify-content: flex-start;
     }
 }
-
 
 
 .problem-list{
@@ -200,8 +192,7 @@ header{
             background-repeat: no-repeat;
             background-size: 20px;
             background-position: center;
-            width: 20px;
-            height: 20px;
+            @include size(20px);
             position: absolute;
             right:0px;
             top:50%;
@@ -214,7 +205,6 @@ header{
             position: relative;
             
         }
-        
     }
     p{
         margin: 16px 0 8px;
@@ -232,7 +222,6 @@ header{
         }
     }
 }
-
 
 
 .small{

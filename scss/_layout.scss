@@ -10,7 +10,6 @@
     padding: 0 20px;
 }
 
-
 nav.container{
     padding: 24px 20px;
 }
@@ -19,28 +18,24 @@ nav{
     display: flex;
     align-items: center;
     h1{
-        width: 218px;
-        height: 40px;
+        @include size(218px,40px);
         text-indent: -100px;
-        overflow: hidden;
         background:url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/logo.png") no-repeat;
         background-size: 218px 40px;
         background-position: center;
+        overflow: hidden;
         a{
             display: block;
+            @include size(218px,40px);
         }
     }
 }
-
 
 footer{
     text-align: center;
     background-color: $gray-2;
     padding: 16px 0;
 }
-
-
-
 
 @include pad{
     nav{
