@@ -32,6 +32,12 @@ header{
     }
 }
 
+@media (max-width:1023px){
+    header{
+        height: 900px;
+    }
+}
+
 @include pad{
     header{
         height: 1100px;
@@ -58,7 +64,7 @@ header{
             background-size: 126px;
             @include size(49px,126px);
             position: absolute;
-            bottom:-120px;
+            bottom:-300px;
         }
         p{
             font-size: 1rem;
@@ -119,6 +125,7 @@ header{
     justify-content: space-between;
     .item{
         width: calc(25% - 16px);
+        height: 388px;
         background-color: $white;
         @include shadow;
         @include radius-3;
@@ -332,13 +339,13 @@ header{
                 background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/user03.jpg");
             }
             &-4{
-                background-image: url("https://github.com/snershen/chatTalker/blob/master/img/user04.png?raw=true");
+                background-image: url("https://raw.githubusercontent.com/snershen/chatTalker/master/img/user04.png");
             }
             &-5{
-                background-image: url("https://github.com/snershen/chatTalker/blob/master/img/user05.png?raw=true");
+                background-image: url("https://raw.githubusercontent.com/snershen/chatTalker/master/img/user05.png");
             }
             &-6{
-                background-image: url("https://github.com/snershen/chatTalker/blob/master/img/user06.png?raw=true");
+                background-image: url("https://raw.githubusercontent.com/snershen/chatTalker/master/img/user06.png");
             }
             
         }
