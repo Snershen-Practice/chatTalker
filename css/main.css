@@ -99,26 +99,6 @@ nav {
   padding: 0 20px;
 }
 
-.btn-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 71px;
-  height: 71px;
-  font-weight: 700;
-  border-radius: 50%;
-  position: fixed;
-  right: 48px;
-  bottom: 23px;
-  z-index: 1;
-}
-
 nav.container {
   padding: 24px 20px;
 }
@@ -148,7 +128,7 @@ nav h1 a {
 
 footer {
   text-align: center;
-  background-color: #F7F9FD;
+  background-color: #F5F5F5;
   padding: 16px 0;
 }
 
@@ -173,17 +153,140 @@ footer {
   }
 }
 
+.mb-2 {
+  margin-bottom: 8px;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+.mb-6 {
+  margin-bottom: 24px;
+}
+
+.mb-12 {
+  margin-bottom: 48px;
+}
+
+.section-apart {
+  margin-bottom: 100px;
+}
+
+.text-c {
+  text-align: center;
+}
+
+.title-0 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.title-1 {
+  font-size: 2rem;
+}
+
+.title-2 {
+  font-size: 1.5rem;
+}
+
+.title-3 {
+  font-size: 1.125rem;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.btn-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 71px;
+  height: 71px;
+  font-weight: 700;
+  border-radius: 50%;
+  position: fixed;
+  right: 48px;
+  bottom: 23px;
+  z-index: 1;
+}
+
+.btn {
+  padding: 12px 32px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.btn-s {
+  padding: 8px 32px;
+}
+
+.btn-primary {
+  background-color: #56C4C5;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #69cbcc;
+}
+
+.btn-secondary {
+  background-color: #FF5D50;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #ff756a;
+}
+
+.btn-outline {
+  background-color: #fff;
+  color: #56C4C5;
+  border: 1px solid #56C4C5;
+}
+
+.btn-outline-focus {
+  background-color: #56C4C5;
+  color: #fff;
+  border: 1px solid #56C4C5;
+}
+
+.primary-color {
+  color: #56C4C5;
+}
+
+@media (max-width: 576px) {
+  .section-apart {
+    margin-bottom: 60px;
+  }
+  .title-0 {
+    font-size: 2rem;
+  }
+  .btn-top {
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
 header {
   height: 100vh;
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home.svg");
+  background-repeat: no-repeat;
   background-position: 85% 40%,right top;
   background-size: 650px,contain;
-  background-repeat: no-repeat;
 }
 
 header::before {
   content: "";
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg");
+  background-repeat: no-repeat;
   background-position: right;
   background-size: 360px;
   width: 138px;
@@ -206,9 +309,9 @@ header p {
   header {
     height: 1100px;
     background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home_sm.svg");
-    background-position: bottom,bottom;
-    background-size: 90%;
     background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 90%;
   }
   header::before {
     bottom: -600px;
@@ -225,15 +328,15 @@ header p {
     background-position: center 70%;
     background-size: 90%;
   }
-  header p {
-    font-size: 1rem;
-  }
   header::before {
     background-size: 126px;
     width: 49px;
     height: 126px;
     position: absolute;
     bottom: -120px;
+  }
+  header p {
+    font-size: 1rem;
   }
 }
 
@@ -294,8 +397,8 @@ header p {
 .role::after {
   content: "";
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball02.svg");
-  background-size: 310px;
   background-repeat: no-repeat;
+  background-size: 310px;
   width: 210px;
   height: 310px;
   position: absolute;
@@ -338,6 +441,7 @@ header p {
   margin-bottom: 16px;
   border-radius: 12px 12px 0 0;
   overflow: hidden;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -470,10 +574,11 @@ header p {
 
 @media (max-width: 1020px) {
   .feature-list {
-    width: 52%;
+    width: 56%;
   }
   .feature-title {
-    width: 48%;
+    width: 44%;
+    margin-left: 16px;
   }
   .feature-title {
     padding: 0;
@@ -532,15 +637,15 @@ header p {
 }
 
 .comment h2 {
-  margin-bottom: 104px;
+  margin-bottom: 48px;
 }
 
-.comment::before {
+.comment .container::before {
   content: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg");
   position: absolute;
   width: 150px;
-  left: 350px;
-  top: 150px;
+  left: 80px;
+  top: 100px;
   z-index: -10;
 }
 
@@ -589,6 +694,18 @@ header p {
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/user03.jpg");
 }
 
+.comment-list .item-img-4 {
+  background-image: url("/img/user04.png");
+}
+
+.comment-list .item-img-5 {
+  background-image: url("/img/user05.png");
+}
+
+.comment-list .item-img-6 {
+  background-image: url("/img/user06.png");
+}
+
 .comment-list .item-detail {
   padding: 24px 32px;
   display: -webkit-box;
@@ -617,6 +734,12 @@ header p {
 
 .comment-list .item-detail p {
   line-height: 1;
+}
+
+@media (max-width: 1200px) {
+  .comment .container::before {
+    left: -40px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -680,12 +803,7 @@ header p {
 }
 
 .swiper {
-  padding: 60px 0px;
-  width: calc(100% - 32px);
-}
-
-.swiper-wrapper {
-  max-width: 1088px;
+  padding: 60px 12px;
 }
 
 .swiper-pagination-bullet-active {

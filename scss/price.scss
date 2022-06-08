@@ -3,6 +3,7 @@
 @import 'mixin';
 @import 'base';
 @import 'layout';
+@import 'component';
 
 header{
     height: 559px;
@@ -151,9 +152,9 @@ header{
         }
     }
     .plan-list{
-        justify-content: flex-start;
-        overflow-x:scroll;
-        margin: 10px;
+        justify-content: center;
+        overflow-x:auto;
+        margin: 0 10px 32px;
     }
     .plan-card{
         flex-direction: column;
@@ -180,6 +181,13 @@ header{
         }
     }
 }
+@media (max-width:810px){
+    .plan-list{
+        justify-content: flex-start;
+    }
+}
+
+
 
 .problem-list{
     .item{
