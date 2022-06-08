@@ -6,18 +6,28 @@ $(document).ready(function(){
     })
     $('.member-1').click(function(){
         $('.plan-member').text("10000");
+        $('.basic-fee').text("600")
+        $('.standard-fee').text("1600")
     })
     $('.member-2').click(function(){
         $('.plan-member').text("15000");
+        $('.basic-fee').text("800")
+        $('.standard-fee').text("1800")
     })
     $('.member-3').click(function(){
         $('.plan-member').text("20000");
+        $('.basic-fee').text("1000")
+        $('.standard-fee').text("2000")
     })
     $('.member-4').click(function(){
         $('.plan-member').text("25000");
+        $('.basic-fee').text("1200")
+        $('.standard-fee').text("2200")
     })
     $('.member-5').click(function(){
         $('.plan-member').text(">25000");
+        $('.basic-fee').text("1500")
+        $('.standard-fee').text("3000")
     })
 
     $('.problem p').hide();

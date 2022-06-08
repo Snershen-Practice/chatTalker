@@ -264,6 +264,12 @@ footer {
   color: #56C4C5;
 }
 
+@media (max-width: 992px) {
+  .section-apart {
+    margin-bottom: 80px;
+  }
+}
+
 @media (max-width: 576px) {
   .section-apart {
     margin-bottom: 60px;

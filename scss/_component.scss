@@ -104,6 +104,13 @@
     color: $primary-color;
 }
 
+
+@include pad{
+    .section-apart{
+        margin-bottom: 80px;
+    }
+}
+
 @include mobile{
     .section-apart{
         margin-bottom: 60px;

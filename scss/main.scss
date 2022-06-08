@@ -301,17 +301,6 @@ header{
     }
 }
 
-
-.swiper {
-    padding: 60px 12px;
-}
-   
-.swiper-pagination-bullet-active {
-    width: 20px;
-    border-radius: 8px ;
-    background-color: $third-color;
-}
-
 .comment-list{
     display: flex;
     justify-content: space-between;
@@ -386,6 +375,11 @@ header{
 }
 
 @include pad{
+    .comment{
+        h2{
+            margin-bottom: 32px;
+        }
+    }
     .comment-list{
         .item{
             width: 100%;
@@ -408,6 +402,29 @@ header{
         }
     }
 }
+
+.swiper {
+    padding: 60px 12px;
+}
+
+.swiper-pagination-bullet-active {
+    width: 20px;
+    border-radius: 8px ;
+    background-color: $third-color;
+}
+
+@include pad{
+    .swiper {
+        padding: 60px 12px 24px;
+    }
+}
+
+@include mobile{
+    .swiper {
+        padding: 60px 12px 0px;
+    }
+}
+   
 
 .footer-price{
     height: 503px;
